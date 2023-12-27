@@ -12,19 +12,19 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card>
+    <Card boxShadow="2xl" variant={"outline"}>
       <Image src={getCroppedImageUrl(game.background_image)} />
-      <CardBody>
+      <CardBody bg={""}>
         <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList
             platforms={game.parent_platforms?.map((p) => p.platform)}
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="lg">
+        <Text fontSize="sm" fontWeight={"bold"}>
           {game.name}
           <Emoji rating={game.rating_top} />
-        </Heading>
+        </Text>
       </CardBody>
     </Card>
   );

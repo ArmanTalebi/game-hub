@@ -16,13 +16,13 @@ const Emoji = ({ rating }: Props) => {
       src: thumbsUp,
       alt: "recommended",
       boxSize: "20px",
-      marginTop: "10px",
+      marginTop: "7px",
     },
     5: {
       src: bullsEye,
       alt: "exceptional",
       boxSize: "25px",
-      marginTop: "7px",
+      marginTop: "2px",
     },
   };
 
