@@ -30,7 +30,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
       </Heading>
       <List>
         {data.map((genre) => (
-          <ListItem key={genre.id} paddingY="8px">
+          <ListItem key={genre.id} paddingY="2px">
             <HStack>
               <Image
                 boxSize="32px"
@@ -39,12 +39,12 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                 src={getCroppedImageUrl(genre.image_background)}
               />
               <Button
-                whiteSpace="normal"
+                whiteSpace="normal" // Commonly that is nowrap because of button
                 textAlign="left"
                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize="md"
-                variant="link"
+                variant="ghost"
                 colorScheme="gray"
               >
                 {genre.name}

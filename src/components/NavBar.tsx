@@ -12,7 +12,15 @@ const NavBar = ({ onSearch }: Props) => {
     <HStack padding="10px">
       {" "}
       //? Hstack for horizantly
-      <Image src={logo} boxSize="60px" />
+      <Image
+        src={logo}
+        boxSize="60px"
+        cursor={"pointer"}
+        transition="transform 0.3s ease-in-out" // Optional: Add a smooth transition
+        _hover={{
+          transform: "scale(1.04)",
+        }}
+      />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
